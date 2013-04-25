@@ -2,6 +2,7 @@
 <html>
 <head>
 	<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 	<style type="text/css">
 	*{
 		margin: 20px;
@@ -34,20 +35,20 @@
 	}
 	// random height 
 	for (var i = 0; i < 10; i++){
-		var a = Math.floor((Math.random()*250)+1);
+		var a = Math.floor((Math.random()*250)+1) + 30;
 		var box = "#box"+i;
 		$( box ).height(a);
 	}
 	// random width
 	for (var i = 0; i < 10; i++){
-		var a = Math.floor((Math.random()*250)+1);
+		var a = Math.floor((Math.random()*250)+1) + 30;
 		var box = "#box"+i;
 		$( box ).width(a);
 	}
 	// random location
 	for (var i = 0; i < 10; i++){
-		var aa = Math.floor((Math.random()*800)+1);
-		var bb = Math.floor((Math.random()*800)+1);
+		var aa = Math.floor((Math.random()*600)+1);
+		var bb = Math.floor((Math.random()*600)+1);
 		var box = "#box"+i;
 		$( box ).css("left" , aa );
 		$( box ).css("top" , bb );
@@ -83,7 +84,9 @@
 		foo = this.id;
   });
   // drog and drop 
- 
+$(function() {
+    $( "div" ).draggable();
+  });
     </script>
 
 
