@@ -3,94 +3,15 @@
 <head>
 	<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
 	<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+	<script type="text/javascript" src="script.js"></script>
 	<style type="text/css">
-	*{
-		margin: 20px;
-		float: left;
-	}
-	div{
-		position: absolute;
-	}
+	* { margin: 20px; float: left; }
+	body { position: absolute; }
+	div { position: relative; font-size: 18px; color: #fff; padding: 5px; margin: 0; }
+	.selected { border: 3px solid red; }
 	</style>
 </head>
 <body>
-	<div id="box0">box0</div>
-	<div id="box1">box1</div>
-	<div id="box2">box2</div>
-	<div id="box3">box3</div>
-	<div id="box4">box4</div>
-	<div id="box5">box5</div>
-	<div id="box6">box6</div>
-	<div id="box7">box7</div>
-	<div id="box8">box8</div>
-	<div id="box9">box9</div>
-<script>
-	// random backgruond color of the div
-	for (var i = 0; i < 10; i++){
-		var a = Math.floor((Math.random()*100)+1);
-		var b = Math.floor((Math.random()*100)+1);
-		var c = Math.floor((Math.random()*100)+1);
-		var box = "#box"+i;
-		$( box ).css({"background-color":"rgb("+a+","+b+","+c+")", border:"0px solid red"});
-	}
-	// random height 
-	for (var i = 0; i < 10; i++){
-		var a = Math.floor((Math.random()*250)+1) + 30;
-		var box = "#box"+i;
-		$( box ).height(a);
-	}
-	// random width
-	for (var i = 0; i < 10; i++){
-		var a = Math.floor((Math.random()*250)+1) + 30;
-		var box = "#box"+i;
-		$( box ).width(a);
-	}
-	// random location
-	for (var i = 0; i < 10; i++){
-		var aa = Math.floor((Math.random()*600)+1);
-		var bb = Math.floor((Math.random()*600)+1);
-		var box = "#box"+i;
-		$( box ).css("left" , aa );
-		$( box ).css("top" , bb );
-	}
-	// click on div then the 
-	var foo = "";
- 	$("div").click(function () {
-    switch (foo){
-			case "box0":
-			$('div').add('#box0').css('border', 'none');
-			case "box1":
-			$('div').add('#box1').css('border', '0px solid red');
-			case "box2":
-			$('div').add('#box2').css('border', '0px solid red');
-			case "box3":
-			$('div').add('#box3').css('border', '0px solid red');
-			case "box4":
-			$('div').add('#box4').css('border', '0px solid red');
-			case "box5":
-			$('div').add('#box5').css('border', '0px solid red');
-			case "box6":
-			$('div').add('#box6').css('border', '0px solid red');
-			case "box7":
-			$('div').add('#box7').css('border', '0px solid red');
-			case "box8":
-			$('div').add('#box8').css('border', '0px solid red');
-			case "box9":
-			$('div').add('#box9').css('border', '0px solid red');
-			default:
-			$(this).css({border:"6px solid red"});
-		}
-		foo = "";
-		foo = this.id;
-  });
-  // drog and drop 
-$(function() {
-    $( "div" ).draggable();
-  });
-    </script>
-
-
-
 </body>
 </html>
 
